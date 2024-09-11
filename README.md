@@ -8,6 +8,7 @@ for these users.
 - JavaScript
 - Personalized cursor
 - Motion design
+- Responsive menu
 
 # Screenshot
 
