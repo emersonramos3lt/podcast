@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+body {
+   /* background-color: #57477b; */
+    /* background-color: #F3F1F3; */
+    background-color: #4342F4;
+
+    margin: 0;
+}
+
+nav #mainMenu {
+    height: 100vh;
+    width: auto;
+
+    position: fixed;
+
+    display: none;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+    background-color: #4342F4;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    z-index: 1;
+
+    transition: all 1s ease 0s;
+}
+
+.current {
+    text-decoration: underline;
+    color: #F18F01;
+}
+
+nav #mainMenu #closeMenu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    cursor: pointer;
+    font-size: 3rem;
+    color: #fff;
+
+    transition: color .2s;
+}
+
+nav #openMenu {
+    font-size: 3rem;
+    cursor: pointer;
+    margin: 1rem;
+    display: block;
+    color: #fff;
+
+    transition: color .2s;
+}
+
+nav #mainMenu li {
+    list-style-type: none;
+    margin-bottom: 4rem;
+}
+
+nav #mainMenu li a {
+    display: flex;
+    place-items: center;
+
+    font-size: 3rem;
+    text-decoration: none;
+    transition: color .2s;
+    color: #fff;
+
+}
+
+nav #mainMenu .redes a {
+    
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin-right: 2rem;
+
+}
+
+nav #mainMenu li a:hover {
+    color: #F18F01;
+}
+
+nav #openMenu:hover {
+    color: #F18F01;
+}
+
+nav #mainMenu #closeMenu:hover {
+    color: #F18F01;
+}
+
+main {
+    max-width: 380px;
+    margin: auto;
+    padding-top: 4rem;
+    color: #fff;
+}
+
+main h1 {
+    font-size: 1.8rem;
+}
+
+main .text-color {
+    color: #F18F01;
+}
+
+main audio {
+    width: clamp(150px, 100%, 580px);
+}
+
+main audio:hover {
+    filter: opacity(80%);
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+
+.buttons {
+    max-width: 380px;
+    margin: auto;
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: visible;
+}
+
+.next {
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color .2s;
+}
+
+.next:hover {
+    color: #F18F01;
+}
+
+.before {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color .2s;
+    padding: 1rem;
+}
+
+.before:hover {
+    color: #F18F01;
+}
+
+form {
+    margin-bottom: 3rem;
+}
+
+.search {
+    all: unset; /* Retira o estilo padrão */
+    border-bottom: 2px solid #fff;
+    width: 80%;
+    font-size: 1.2rem;
+}
+
+.search:focus {
+    border-bottom: 2px solid #CE8964;
+}
+
+.submit {
+    all: unset;
+    background-color: #fff;
+    color: #4342F4;
+    border: 2px solid #fff;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    transition: all .2s;
+    text-align: center;
+}
+
+.submit:hover {
+    background-color: #4342F4;
+    color: #fff;
+}
+
+
+@media (min-width: 700px) {
+
+    main {
+        max-width: 1000px;
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+    main p {
+        font-size: 1.2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submit {
+        width: 10%;
+    }
+
+    .buttons {
+        max-width: 1200px;
+    }
+
+    .cursor {
+        position: absolute;
+        background-color: #CE8964;
+        opacity: 1;
+        height: 28px;
+        width: 28px;
+        top: 50%;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 1;
+        pointer-events: none; 
+    }
+
+    .cursor.active {
+        animation: click .7s ease;
+    }
+
+    @keyframes click {
+        100% {
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 0;
+        }
+
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    }
+}
