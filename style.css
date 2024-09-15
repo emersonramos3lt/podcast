@@ -58,6 +58,7 @@ nav #openMenu {
     margin: 1rem;
     display: block;
     color: #fff;
+    width: 15px;
 
     transition: color .2s;
 }
